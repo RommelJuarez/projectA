@@ -152,16 +152,14 @@ span {
   color: green;
 }
 
-/* Añadir un nuevo row cuando la pantalla es menor a 780px */
+
 @media (max-width: 780px) {
   #grid {
-    grid-template-rows: 110% 101%;
+    grid-template-rows: 110% 60%;
     grid-template-columns: 0fr;
   }
 
-  #box {
-    order: 2; /* Cambiar el orden para que aparezca después del mapa en el nuevo row */
-  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -179,10 +177,22 @@ span {
   }
 
   .content-grid {
-    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
   }
 
   .content-img {
-    grid-column: auto; /* Restaura el flujo normal de la imagen en pantallas pequeñas */
+    grid-column: auto; 
   }
+  #box {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 auto;
+ 
+  }
+  
 }
