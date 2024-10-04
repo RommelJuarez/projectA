@@ -53,24 +53,24 @@ nav a {
   font-weight: bold;
 }
 
-main {
-  padding: 20px;
-  margin-bottom: 350px;
-}
+
 
 .contenedor {
-  margin-right: 17%;
-  margin-left: 17%;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  
+  flex-direction: column;
+  margin-top: 5%;
 }
 
 h1 {
   color: #87CEEB;
   font-family: 'Archivo Narrow', sans-serif;
-  margin-top: 2em;
-  margin-bottom: 55px;
+ 
   font-size: 4em;
   text-align: center;
   
@@ -81,8 +81,7 @@ h1 {
   padding: 10px 20px;
   background-color: #48484a; 
   color: #87CEEB; 
-  margin-left: 40%;
-  margin-right: 40%;
+  
   font-size: 1.5em;
   text-decoration: none;
   border-radius: 10px; 
@@ -106,11 +105,12 @@ footer {
 
 .content-grid {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template: 1fr/1fr 1fr;
   gap: 20px;
-  margin: 0 auto; 
-  width: 100%;
-  margin-top: 20%;
+  margin-top: 16%;
+  
+  padding: 3%;
+  
 }
 
 
@@ -164,14 +164,13 @@ p {
   }
   .boton-ir-mapa {
     display: inline-block;
-    padding: 10px -1px;
+    width: 20%;
     background-color: #48484a;
     color: #87CEEB;
-    margin-left: 35%;
-    margin-right: 40%;
-    font-size: 2.5vw;
+    
+    font-size: 1em;
     text-decoration: none;
-    border-radius: 10px;
+    
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
