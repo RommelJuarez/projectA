@@ -30,20 +30,20 @@ const onMapClick = (e) => {
 };
 
 
-// Function to get coordinates on map click
+// funcion para obtener las coordenadas cuando se hace click en el mapa 
 const getCoords = (c) => {
     let coords = c.latlng;
     currentCoords = coords;
     
 };
 
-// Function to convert temperature from Kelvin to Fahrenheit
+// kelvin a farenheit
 const kelvinToFahrenheit = kelvin => (kelvin - 273.15) * 9/5 + 32;
-// Function to convert temperature from Kelvin to Celsius
+// kelvin a celsius
 const kelvinToCelsius = kelvin => kelvin - 273.15;
 
 
-// Function to output weather data
+// funcion par mostrar los datos
 const output = (c) => {
     document.getElementById("city").innerText = c.name;
     document.getElementById("temperatureC").innerText = kelvinToCelsius(c.main.temp).toFixed(1);
@@ -52,7 +52,7 @@ const output = (c) => {
 };
 
 
-// Attach main functions to the map click event
+//cuando se hace click en el mapa:
 map.on("click", getCoords);
 map.on('click', onMapClick);
 map.on("click", weather);
