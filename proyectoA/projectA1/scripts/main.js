@@ -1,8 +1,8 @@
 
 let apiKey="01c3341a6290780238f6a88215965a37";
 
-
-// Function to fetch weather data from OpenWeatherMap API
+let currentCoords={ lat: -0.224043, lng: -78.512833 };
+// funcion para llamar al api del clima
 const weather = async () => {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${currentCoords.lat}&lon=${currentCoords.lng}&appid=${apiKey}`);
     const data = await response.json();
@@ -10,7 +10,7 @@ const weather = async () => {
     console.log('datos json',data);
 };
 
-// Leaflet documentation to create the map
+// Leaflet documentacion para crear el mapa 
 var map = L.map("map").setView([-0.224043, -78.512833], 13);
 
 
@@ -19,7 +19,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// leafleat documentation to create the popup 
+// leafleat documentacion para crear el popup
 var popup = L.popup();
 
 const onMapClick = (e) => {
